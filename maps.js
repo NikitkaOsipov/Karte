@@ -11,7 +11,6 @@ async function loadJSON() {
         const response = await fetch('vietas.json');
         const data = await response.json();
         const places = getPlacesArray(data);
-        console.log('Places array:', places); // Debugging statement
         addMarkersToMap(places);
     } catch (error) {
         console.error('Error fetching JSON:', error);
